@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.right-esqueceusenha{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-esqueceusenha{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 35px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: bolder;
+}
+
+.title-a > a{
+    color: #747474;
+}
+
+.title > h1{
+    text-transform: uppercase;
+    color: #11B9C4;
+    font-weight: 800;
+    margin: 0;
+    font-weight: bolder;
+}
+
+.title > img {
+    margin-right: 5px;
+    height: 4vh;
+}
+
+.textfield{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #FFFFFF;
+    color: #11B9C4;
+    border: 0.5px solid #11B9C4;
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > input:hover{
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.textfield > label {
+    color: #747474;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder{
+    color: #747474;
+}
+
+.btn-password{
+    width: 70%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    background: #11B9C4;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #067981c4;
+}
+
+.trasitionButton{
+    transition: transform 1s;
+}
+
+.trasitionButton:hover{
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 950px){
+    .card-esqueceusenha{
+        width: 85%;
+    }
+
+    .card-esqueceusenha > h1 {
+        font-weight: 800;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    
+    .right-esqueceusenha{
+        width: 100%;
+        height: auto;
+    }
+
+    .card-esqueceusenha{
+        width: 90%;
+    }
+    
+    .title > h1{
+        font-weight: 800;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title > img{
+        height: 4vh;
+        width: 5vw;
+
+    }
+
+}
+
+@media only screen and (max-width: 350px){
+    .title > img{
+        height: 4vh;
+        width: 7vw;
+
+    }
+
+    .title > h1{
+        font-size: 1.4rem;
+    }
+
+}

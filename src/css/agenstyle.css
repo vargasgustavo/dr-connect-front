@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    height: 25%;
+    display: flex;
+}
+
+.logo{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo > img {
+    cursor: pointer;
+    width: 40%;
+}
+
+.menu{
+    padding-left: 10%;
+    width: 70%;
+}
+
+.menu li {
+    margin: 10px;
+    list-style: none;
+    display: inline-flex;
+    font-size: 1.5vw;
+    font-weight: 800;
+    cursor: pointer;
+}
+.menu ul li a::after {
+    content: '';
+    margin-left: 7px;
+    display: flex;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: #11B9C4;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    width: 80%;
+    left: 25%;
+}
+
+.body{
+    margin-top: 6%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-scheduling{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.textfield{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+.textfield > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #FFFFFF;
+    color: #11B9C4;
+    border: 0.5px solid #11B9C4;
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > input:hover{
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.textfield > label {
+    color: #747474;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder{
+    color: #11B9C4;
+}
+
+.card-button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.btn-scheduling{
+    width: 40%;
+    padding: 16px 0px;
+    margin: 18px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #FFFFFF;
+    background: #11B9C4;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #067981c4;
+}
+
+.trasitionButton{
+    transition: transform 1s;
+}
+
+.trasitionButton:hover{
+    transform: scale(1.1);
+}
