@@ -3,6 +3,7 @@ import '../css/pacientestyle.css'
 import axiosInstance from '../axios';
 import { useParams } from 'react-router-dom';
 import FeedBack from '../Layouts/FeedBack';
+import logoCard from "../images/logo-card-login.svg"
 
 const CadastroMain = (props) => {
 
@@ -12,7 +13,7 @@ const CadastroMain = (props) => {
     const pathParam = useParams("id");
     const [user, setUser] = useState(null);
 
-    const [form, setForm] = useState({ usuario: '', email: '', senha: '', confsenha: '' })
+    const [form, setForm] = useState({ nome: '', email: '', senha: '', confsenha: '' })
     const updateForm = (e) => {
 
         setForm({ ...form, [e.target.name]: e.target.value })
@@ -48,8 +49,7 @@ const CadastroMain = (props) => {
         <div>
             <div class="main-login">
                 <div class="left-login">
-                    <h1>Cadastre-se e tenha<br />o melhor atendimento</h1>
-                    <img alt='' src="../images/doctor.svg" class="left-login-image" />
+                    <h1>Edite seu perfil</h1>
                 </div>
                 <div class="right-login">
                     <div class="card-login">
@@ -57,11 +57,11 @@ const CadastroMain = (props) => {
                             <a>Bem Vindo(a) ao</a>
                         </div>
                         <div class="title">
-                            <img alt='' src="../images/logo-card-login.svg" class="title-image" />
+                            <img alt='' src={logoCard} class="title-image" />
                         </div>
                         <div class="textfield">
                             <label for="usuario">Nome completo</label>
-                            <input type="text" name="usuario" placeholder="Usuário" required onChange={updateForm} value={form.usuario} />
+                            <input type="text" name="nome" placeholder="Digite seu nome..." required onChange={updateForm} value={form.nome} />
                         </div>
                         <div class="textfield">
                             <label for="senha">E-mail</label>
@@ -77,7 +77,7 @@ const CadastroMain = (props) => {
                             <p>Ao criar uma conta, você aceita os termos e condições de uso da Dr. Connect e reconhece que leu e entendeu nossa política de privacidade.
                             </p>
                         </div>
-                        <button class="button-login trasitionButton" onClick={submitForm}>Prosseguir</button>
+                        <button class="button-login trasitionButton" onClick={submitForm}>Salvar Alterações</button>
                     </div>
                 </div>
             </div>

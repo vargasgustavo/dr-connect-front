@@ -56,7 +56,7 @@ const CadastroMedico = () => {
                     <h1>Cadastre-se e tenha<br />o melhor atendimento</h1>
                 </div>
                 <div className="right-login">
-                    <div className="card-login">
+                    <div className="card-login-medic">
                         <div className="title-a">
                             <a>Bem Vindo(a) ao</a>
                         </div>
