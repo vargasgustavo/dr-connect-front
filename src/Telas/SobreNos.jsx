@@ -1,6 +1,5 @@
 import React from 'react';
 import '../css/sobreNos.css';
-import Logo from '../images/logo.svg'
 import Image1 from '../images/dispositivo-sobrenos.svg'
 import Image2 from '../images/design-sobrenos.svg'
 import Image3 from '../images/agende-sobrenos.svg'

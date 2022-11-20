@@ -10,12 +10,12 @@ body * {
 }
 
 .main-login{
-    width: 90vw;
-    height: 70vh;
-    background: #E5E5E5;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 99vw !important;
+    height: 70vh !important;
+    background: #E5E5E5 !important;    
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
 .left-login{

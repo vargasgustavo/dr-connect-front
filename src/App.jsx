@@ -13,7 +13,6 @@ import HomeMedico from './Telas/HomeMedico';
 import HomePaciente from './Telas/HomePaciente';
 import PerfilPaciente from './Telas/PerfilPaciente';
 import PerfilMedico from './Telas/PerfilMedico';
-import Escolha from './Telas/Escolha';
 
 const App = () => {
 

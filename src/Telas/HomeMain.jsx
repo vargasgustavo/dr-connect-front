@@ -1,28 +1,22 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../images/logo.svg'
 import Doc from '../images/doctor-home.png'
 import '../css/homestyle.css'
+import useDebounce from '../useDebounce';
 
-const HomeMain = () => {
+const HomeMain = ({ value, onChange }) => {
 
-    const [form, setForm] = useState({convenio: '', especialidade: ''})
-    const updateForm = (e) => {
-        setForm({...form, [e.target.name] : e.target.value})
-    }
+    const [displayValue, setDisplayValue] = useState(value);
+    const debouncedChange = useDebounce(onChange, 500);
 
-    const handleChange = e => {
-        e.preventDefault();
-        setForm({ ...form, [e.target.name]: e.target.value })
-    }
-
-    const Filtro = async(e) => {
-        
+    function handleChange(event) {
+        setDisplayValue(event.target.value);
+        debouncedChange(event.target.value);
     }
 
     return (
         <>
-            
+
             <div className="body">
                 <div className="header-body">
                     <div className="left-header-body">
@@ -39,13 +33,13 @@ const HomeMain = () => {
                         <h1>O que gostaria de agendar?</h1>
                     </div>
                     <div className="textfield">
-                        <input type="text" name="convenio" placeholder="Escolha um convênio" value={form.convenio} onChange={updateForm}/>
+                        <input type="search" name="convenio" placeholder="Escolha um convênio" value={displayValue} onChange={handleChange} />
                     </div>
                     <div className="textfield">
-                        <input type="text" name="especialidade" placeholder="Escolha uma especialidade" value={form.especialidade} onChange={updateForm} />
+                        <input type="search" name="especialidade" placeholder="Escolha uma especialidade" value={displayValue} onChange={handleChange} />
                     </div>
                     <div className="card-button">
-                        <Link to="/busca"><button className="btn-login trasitionButton" onClick={() => {}}>Buscar</button></Link>
+                        <Link to="/busca"><button className="btn-login trasitionButton" onClick={() => { }}>Buscar</button></Link>
                     </div>
                 </div>
             </div>
