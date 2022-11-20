@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../css/medico.css'
-import logoCard from '../images/logo-card-login.svg'
 import axiosInstance from '../axios'
+import logoCard from '../images/logo-card-login.svg'
 
 const CadastroMedico = () => {
     const [form, setForm] = useState({ name: '', crm: '', speciality: '', phoneNumber: '', cep: '', numberStreet: '', complement: '', medicalInsurance: '' })

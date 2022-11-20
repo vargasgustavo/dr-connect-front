@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Outlet, Routes, Route } from 'react-router-dom';
-import CadastroMain from './Telas/CadastroMain';
+import EditarPerfil from './Telas/EditarPerfil';
 import Header from './Telas/Header';
 import HomeMain from './Telas/HomeMain';
 import SobreNos from './Telas/SobreNos';
@@ -23,31 +23,46 @@ const App = () => {
     <>
       <Header role={role} loggedIn={loggedIn} />
       <Routes>
+
         {loggedIn ?
+
           <>
 
-
             {role == "ROLE_PATIENT" ?
+
               <>
+
+                <Route path='/edit-profile' element={<><EditarPerfil /></>} />
                 <Route path='/agenda' element={<><Agendamento /></>} />
                 <Route path='/busca' element={<><Filtro /></>} />
                 <Route path='/edit-profile' element={<><PerfilPaciente /></>} />
                 <Route path='*' element={<><HomePaciente /></>} />
+
               </> :
+
               <>
+
+                <Route path='/edit-profile' element={<><EditarPerfil /></>} />
                 <Route path='/agenda' element={<><Agenda /></>} />
                 <Route path='/edit-profile' element={<><PerfilMedico /></>} />
                 <Route path='*' element={<><HomeMedico /></>} />
+
               </>
+
             }
+
           </> :
+
           <>
 
             <Route path='/nossos-servicos' element={<><SobreNos /></>} />
             <Route path='/login' element={<><Login /></>} />
             <Route path='*' element={<><HomeMain /></>} />
+
           </>
+
         }
+
       </Routes>
       {role}
       <Outlet />

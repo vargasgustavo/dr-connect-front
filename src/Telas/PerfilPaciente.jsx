@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import '../css/paciente.css'
 import axiosInstance from '../axios'
-import Drconnect from '../images/logo-card-login.svg'
+import logoCard from '../images/logo-card-login.svg'
 
 const CadastroPaciente = () => {
-
-    const [form, setForm] = useState({ name: '', cpf: '', phoneNumber: '', cep: '', numberStreet: '', complement: '', dateNasciment: '' })
+    const [form, setForm] = useState({ name: '', cpf: '', phoneNumber: '', cep: '', numberStreet: '', complement: '', birthDate: '' })
     const updateForm = (e) => {
 
         setForm({ ...form, [e.target.name]: e.target.value })
@@ -36,7 +35,7 @@ const CadastroPaciente = () => {
                 phoneNumber: patient.phoneNumber,
                 numberStreet: patient.numberStreet,
                 cpf: patient.cpf,
-                dateNasciment: patient.dateNasciment,
+                birthDate: patient.birthDate,
                 complement: patient.complement
             })
             // setUser(user);
@@ -61,7 +60,7 @@ const CadastroPaciente = () => {
                             <a>Bem Vindo(a) ao</a>
                         </div>
                         <div class="title">
-                            <img src={Drconnect} class="title-image" />
+                            <img src={logoCard} class="title-image" />
                         </div>
                         <div class="textfield">
                             <label for="name">Nome</label>
@@ -69,7 +68,7 @@ const CadastroPaciente = () => {
                         </div>
                         <div class="textfield">
                             <label for="date">Data de Nascimento</label>
-                            <input type="date" name="date" required onChange={updateForm} value={form.dateNasciment} />
+                            <input type="date" name="date" required onChange={updateForm} value={form.birthDate} />
                         </div>
                         <div class="textfield">
                             <label for="telefone">Telefone</label>
