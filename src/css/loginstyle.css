@@ -48,7 +48,7 @@ body * {
     width: 50% !important;
     height: 50%;
     display: flex !important;
-    justify-content: space-evenly !important;
+    justify-content: center !important;
     align-items: center !important;
     flex-direction: column !important;
     padding: 30px 35px !important;
@@ -61,11 +61,12 @@ body * {
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
+    margin-bottom: 50px !important;
 }
 
 .title-a > a{
     color: #747474 !important;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .title > h1{
@@ -160,6 +161,7 @@ body * {
 
 .choice {
     font-size: 1.6rem;
+    margin-bottom: 0.8rem !important;
 }
 
 .choice input[type="radio"] {
