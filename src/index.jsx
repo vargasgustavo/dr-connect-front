@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { createStore } from 'redux';
-
+import ContextWrapper from "./context/ContextWrapper";
 import reducer from './redux/reducer';
 import { Provider } from 'react-redux';
 
@@ -19,7 +19,9 @@ const renderReactDom = () => {
       <Provider store={store}>
         <BrowserRouter>
           <React.StrictMode>
-            <App />
+            <ContextWrapper>
+              <App />
+            </ContextWrapper>
           </React.StrictMode>
         </BrowserRouter>
       </Provider>
