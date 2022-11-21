@@ -13,8 +13,7 @@ const CadastroMain = (props) => {
     const pathParam = useParams("id");
     const [user, setUser] = useState(null);
 
-    const [form, setForm] = useState({ nome: '', email: '', senha: '', confsenha: '' })
-    const updateForm = (e) => {
+    const [form, setForm] = useState({ nome: '', email: '', senha: '', confsenha: '' })    const updateForm = (e) => {
 
         setForm({ ...form, [e.target.name]: e.target.value })
     }
